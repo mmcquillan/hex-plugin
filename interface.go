@@ -7,10 +7,13 @@ import (
 )
 
 // Handshake Config
-var HandshakeConfig = plugin.HandshakeConfig{
-	ProtocolVersion:  1,
-	MagicCookieKey:   "HexBotPlugin",
-	MagicCookieValue: "HexBotPlugin",
+func GetHandshakeConfig() plugin.HandshakeConfig {
+	hc := plugin.HandshakeConfig{
+		ProtocolVersion:  1,
+		MagicCookieKey:   "HexBotPlugin",
+		MagicCookieValue: "HexBotPlugin",
+	}
+	return hc
 }
 
 // call args
